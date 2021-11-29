@@ -1,61 +1,20 @@
+import { Meta, Story } from "@storybook/web-components";
 import { html } from "lit";
 import { JigData } from "./types";
-import "./jig-label-ui";
+import { JigLabelUI } from "./jig-label-ui";
+import { jigs } from "./data";
+
+import './jig-label-ui'
 
 export default {
   title: "Jig Label UI",
-};
+  component: 'jig-label-ui',
+} as Meta;
 
-const jigs = [
-  {
-    jig_name: "Hebrew Letters",
-    author: "Michael Wikes",
-    author_badge: "JI Team",
-    date: "Aug. 5, 2020",
-    language: "English (American)",
-    curators: ["Anat (13.7.21)"],
-  },
-  {
-    jig_name: "Hebrew Numbers & Balloons",
-    author: "Michael Wikes",
-    author_badge: "JI Team",
-    date: "Aug. 5, 2020",
-    language: "English (American)",
-    curators: ["Anat (13.7.21)"],
-  },
-  {
-    jig_name: "Hebrew Letters",
-    author: "Michael Wikes",
-    author_badge: "JI Team",
-    date: "Aug. 5, 2020",
-    language: "English (American)",
-    curators: ["Anat (13.7.21)"],
-  },
-  {
-    jig_name: "Hebrew Letters",
-    author: "Michael Wikes",
-    author_badge: "JI Team",
-    date: "Aug. 5, 2020",
-    language: "English (American)",
-    curators: ["Anat (13.7.21)"],
-  },
-  {
-    jig_name: "Hebrew Letters",
-    author: "Michael Wikes",
-    author_badge: "JI Team",
-    date: "Aug. 5, 2020",
-    language: "English (American)",
-    curators: ["Anat (13.7.21)"],
-  },
-  {
-    jig_name: "Hebrew Letters",
-    author: "Michael Wikes",
-    author_badge: "JI Team",
-    date: "Aug. 5, 2020",
-    language: "English (American)",
-    curators: ["Anat (13.7.21)"],
-  },
-] as JigData[];
-
-export const Primary = () =>
+const Template: Story<JigLabelUI> = ({ jigs }: { jigs: JigData[] }) =>
   html`<jib-label-ui .jigs="${jigs}"></jib-label-ui>`;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  jigs,
+};
