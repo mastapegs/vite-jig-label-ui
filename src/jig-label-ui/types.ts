@@ -4,5 +4,5 @@ export interface JigData {
   author_badge: string;
   date: string;
   language: string;
-  curators: string[];
+  curators: string;
 }

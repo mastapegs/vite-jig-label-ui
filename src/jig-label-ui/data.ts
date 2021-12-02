@@ -7,7 +7,7 @@ export const jigs: JigData[] = [
     author_badge: "JI Team",
     date: "Aug. 5, 2020",
     language: "English (American)",
-    curators: ["Anat (13.7.21)"],
+    curators: "Anat (13.7.21)",
   },
   {
     jig_name: "Hebrew Numbers & Balloons",
@@ -15,7 +15,7 @@ export const jigs: JigData[] = [
     author_badge: "JI Team",
     date: "Aug. 5, 2020",
     language: "English (American)",
-    curators: ["Anat (13.7.21)"],
+    curators: "Anat (13.7.21)",
   },
   {
     jig_name: "Hebrew Letters",
@@ -23,7 +23,7 @@ export const jigs: JigData[] = [
     author_badge: "JI Team",
     date: "Aug. 5, 2020",
     language: "English (American)",
-    curators: ["Anat (13.7.21)"],
+    curators: "Anat (13.7.21)",
   },
   {
     jig_name: "Hebrew Letters",
@@ -31,7 +31,7 @@ export const jigs: JigData[] = [
     author_badge: "JI Team",
     date: "Aug. 5, 2020",
     language: "English (American)",
-    curators: ["Anat (13.7.21)"],
+    curators: "Anat (13.7.21)",
   },
   {
     jig_name: "Hebrew Letters",
@@ -39,7 +39,7 @@ export const jigs: JigData[] = [
     author_badge: "JI Team",
     date: "Aug. 5, 2020",
     language: "English (American)",
-    curators: ["Anat (13.7.21)"],
+    curators: "Anat (13.7.21)",
   },
   {
     jig_name: "Hebrew Letters",
@@ -47,6 +47,6 @@ export const jigs: JigData[] = [
     author_badge: "JI Team",
     date: "Aug. 5, 2020",
     language: "English (American)",
-    curators: ["Anat (13.7.21)"],
+    curators: "Anat (13.7.21)",
   },
 ];

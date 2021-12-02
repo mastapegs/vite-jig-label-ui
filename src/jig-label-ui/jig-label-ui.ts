@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
+import "../single-jig";
 
 export interface JigData {
   jig_name: string;
@@ -7,7 +8,7 @@ export interface JigData {
   author_badge: string;
   date: string;
   language: string;
-  curators: string[];
+  curators: string;
 }
 
 @customElement("jig-label-ui")
@@ -16,7 +17,7 @@ export class JigLabelUI extends LitElement {
     .container {
       font-family: sans-serif;
       background: #f3f8fe;
-      
+
       border: solid 1px #c4d9f7;
     }
     .headers {
@@ -24,15 +25,6 @@ export class JigLabelUI extends LitElement {
       justify-content: space-between;
       font-weight: 700;
       color: #2565d5;
-    }
-    .jig {
-      display: flex;
-      justify-content: space-between;
-    }
-    .flex {
-      flex: 1 1 0;
-      border: solid 1px #eaebef;
-      padding: 5px;
     }
   `;
 
@@ -58,14 +50,16 @@ export class JigLabelUI extends LitElement {
           )}
         </div>
         ${this.jigs.map((jig) => {
-          return html`<div class="jig">
-            <div class="flex">${jig.jig_name}</div>
-            <div class="flex">${jig.author}</div>
-            <div class="flex">${jig.author_badge}</div>
-            <div class="flex">${jig.date}</div>
-            <div class="flex">${jig.language}</div>
-            <div class="flex">${jig.curators.join(", ")}</div>
-          </div>`;
+          return html`
+            <single-jig>
+              <span slot="jig-name">${jig.jig_name}</span>
+              <span slot="author">${jig.author}</span>
+              <span slot="author-badge">${jig.author_badge}</span>
+              <span slot="date">${jig.date}</span>
+              <span slot="language">${jig.language}</span>
+              <span slot="curators">${jig.curators}</span>
+            </single-jig>
+          `;
         })}
       </div>
     `;
