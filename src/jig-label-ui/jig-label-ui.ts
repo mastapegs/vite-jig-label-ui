@@ -10,7 +10,7 @@ export interface JigData {
   curators: string[];
 }
 
-@customElement("jib-label-ui")
+@customElement("jig-label-ui")
 export class JigLabelUI extends LitElement {
   static styles = css`
     .container {

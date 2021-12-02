@@ -6,7 +6,7 @@ struct App {}
 impl App {
     fn render() -> Dom {
         // Create the DOM nodes
-        html!("my-element", {})
+        html!("jig-label-ui", {})
     }
 }
 

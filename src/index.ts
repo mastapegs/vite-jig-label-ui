@@ -1,4 +1,4 @@
-import './my-element';
+import './jig-label-ui';
 //@ts-ignore
 import init from "my-crate";
 // Don't worry if vscode told you can't find my-crate

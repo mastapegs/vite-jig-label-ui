@@ -12,7 +12,7 @@ export default {
 } as Meta;
 
 const Template: Story<JigLabelUI> = ({ jigs }: { jigs: JigData[] }) =>
-  html`<jib-label-ui .jigs="${jigs}"></jib-label-ui>`;
+  html`<jig-label-ui .jigs="${jigs}"></jig-label-ui>`;
 
 export const Primary = Template.bind({});
 Primary.args = {
