@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
+import jigFlex from "../common-css/jig-flex-css";
 import "../single-jig";
 
 export interface JigData {
@@ -13,20 +14,23 @@ export interface JigData {
 
 @customElement("jig-label-ui")
 export class JigLabelUI extends LitElement {
-  static styles = css`
-    .container {
-      font-family: sans-serif;
-      background: #f3f8fe;
+  static styles = [
+    jigFlex,
+    css`
+      .container {
+        font-family: sans-serif;
+        background: #f3f8fe;
 
-      border: solid 1px #c4d9f7;
-    }
-    .headers {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 700;
-      color: #2565d5;
-    }
-  `;
+        border: solid 1px #c4d9f7;
+      }
+      .headers {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        color: #2565d5;
+      }
+    `,
+  ];
 
   @property({ attribute: false })
   headers: string[] = [

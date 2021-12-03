@@ -1,20 +1,18 @@
 import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
+import jigFlex from '../common-css/jig-flex-css'
 
 @customElement("single-jig")
 export class SingleJig extends LitElement {
-  static styles = css`
-    .jig {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .flex {
-      flex: 1 1 0;
-      border: solid 1px #eaebef;
-      padding: 5px;
-    }
-  `;
+  static styles = [
+    jigFlex,
+    css`
+      .jig {
+        display: flex;
+        justify-content: space-between;
+      }
+    `,
+  ];
 
   render() {
     return html`<div class="jig">
