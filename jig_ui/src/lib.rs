@@ -13,6 +13,12 @@ struct JigData {
 struct App {}
 
 impl App {
+    fn render_jig_span(slot: &str, text: &str) -> Dom {
+        html!("span", {
+            .attribute("slot", slot)
+            .text(text)
+        })
+    }
     fn render() -> Dom {
         let jigs: Vec<JigData> = vec![
             JigData {
@@ -36,30 +42,12 @@ impl App {
             .children(jigs.iter().map(|jig: &JigData| {
                 html!("single-jig", {
                     .children(&mut [
-                        html!("span", {
-                            .attribute("slot", "jig-name")
-                            .text(&jig.jig_name)
-                        }),
-                        html!("span", {
-                            .attribute("slot", "author")
-                            .text(&jig.author)
-                        }),
-                        html!("span", {
-                            .attribute("slot", "author-badge")
-                            .text(&jig.author_badge)
-                        }),
-                        html!("span", {
-                            .attribute("slot", "date")
-                            .text(&jig.date)
-                        }),
-                        html!("span", {
-                            .attribute("slot", "language")
-                            .text(&jig.language)
-                        }),
-                        html!("span", {
-                            .attribute("slot", "curators")
-                            .text(&jig.curators.join(", "))
-                        }),
+                        Self::render_jig_span("jig-name", &jig.jig_name),
+                        Self::render_jig_span("author", &jig.author),
+                        Self::render_jig_span("author-badge", &jig.author_badge),
+                        Self::render_jig_span("date", &jig.date),
+                        Self::render_jig_span("language", &jig.language),
+                        Self::render_jig_span("curators", &jig.curators.join(", ")),
                     ])
                 })
             }))
