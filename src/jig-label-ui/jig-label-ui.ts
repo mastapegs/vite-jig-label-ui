@@ -10,7 +10,6 @@ export class JigLabelUI extends LitElement {
       .container {
         font-family: sans-serif;
         background: #f3f8fe;
-
         border: solid 1px #c4d9f7;
       }
       .headers {

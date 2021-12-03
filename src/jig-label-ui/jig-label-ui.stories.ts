@@ -1,7 +1,7 @@
 import { Meta, Story } from "@storybook/web-components";
 import { html } from "lit";
-import { JigData } from "./types";
-import { jigs } from "./data";
+import { JigData } from "../types";
+import { jigs } from "./story-data";
 
 import "./jig-label-ui";
 import "../single-jig";

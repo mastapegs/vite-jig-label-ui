@@ -1,4 +1,4 @@
-import { JigData } from "./types";
+import { JigData } from "../types";
 
 export const jigs: JigData[] = [
   {

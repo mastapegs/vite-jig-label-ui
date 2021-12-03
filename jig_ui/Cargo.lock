@@ -115,6 +115,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "jig_ui"
+version = "0.1.0"
+dependencies = [
+ "cfg-if 1.0.0",
+ "console_error_panic_hook",
+ "dominator",
+ "futures-signals",
+ "once_cell",
+ "wasm-bindgen",
+ "wasm-bindgen-test",
+ "wee_alloc",
+]
+
+[[package]]
 name = "js-sys"
 version = "0.3.55"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -149,20 +163,6 @@ name = "memory_units"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8452105ba047068f40ff7093dd1d9da90898e63dd61736462e9cdda6a90ad3c3"
-
-[[package]]
-name = "my-crate"
-version = "0.1.0"
-dependencies = [
- "cfg-if 1.0.0",
- "console_error_panic_hook",
- "dominator",
- "futures-signals",
- "once_cell",
- "wasm-bindgen",
- "wasm-bindgen-test",
- "wee_alloc",
-]
 
 [[package]]
 name = "once_cell"

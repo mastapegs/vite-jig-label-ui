@@ -8,5 +8,5 @@ export default defineConfig({
       external: /^lit/
     }
   },
-  plugins: [wasmPack(['./my-crate'])]
+  plugins: [wasmPack(['./jig_ui'])]
 });

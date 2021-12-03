@@ -1,5 +1,5 @@
 [package]
-name = "my-crate"
+name = "jig_ui"
 version = "0.1.0"
 authors = ["Matthew Pagan <mastapegs01@gmail.com>"]
 edition = "2018"
