@@ -1,13 +1,6 @@
 use dominator::{html, Dom};
 
-pub struct JigData {
-    jig_name: String,
-    author: String,
-    author_badge: String,
-    date: String,
-    language: String,
-    curators: Vec<String>,
-}
+use crate::types::JigData;
 
 pub struct JigUI {}
 
@@ -18,25 +11,7 @@ impl JigUI {
             .text(text)
         })
     }
-    pub fn render() -> Dom {
-        let jigs: Vec<JigData> = vec![
-            JigData {
-                jig_name: String::from("Hebrew Letters"),
-                author: String::from("Michael Wikes"),
-                author_badge: String::from("JI Team"),
-                date: String::from("Aug. 5, 2020"),
-                language: String::from("English (American)"),
-                curators: vec![String::from("Anat (13.7.21)")],
-            },
-            JigData {
-                jig_name: String::from("Hebrew Letters"),
-                author: String::from("Michael Wikes"),
-                author_badge: String::from("JI Team"),
-                date: String::from("Aug. 5, 2020"),
-                language: String::from("English (American)"),
-                curators: vec![String::from("Anat (13.7.21)")],
-            },
-        ];
+    pub fn render(jigs: Vec<JigData>) -> Dom {
         html!("jig-label-ui", {
             .children(jigs.iter().map(|jig: &JigData| {
                 html!("single-jig", {
