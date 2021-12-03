@@ -1,6 +1,5 @@
 use dominator::{html, Dom};
-
-use crate::types::JigData;
+use crate::JigData;
 
 pub struct JigUI {}
 
